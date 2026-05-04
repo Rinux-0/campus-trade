@@ -16,7 +16,7 @@ async function reset() {
     <p style="max-width:32rem;margin:0 auto;color:var(--pico-muted-color);">Rust Axum + Vue 3 + PostgreSQL — 数据库大作业，CRUD、事务、自由查询、视图、聚合统计全覆盖。</p>
     <div style="margin-top:1.5rem;display:flex;gap:0.75rem;justify-content:center;">
       <a href="/api" target="_blank" role="button">API 文档</a>
-      <a href="https://github.com" target="_blank" role="button" class="outline">查看源码</a>
+      <a href="https://github.com/Rinux-0/campus-trade" target="_blank" role="button" class="outline">查看源码</a>
     </div>
   </section>
 
@@ -47,7 +47,6 @@ async function reset() {
       <div style="text-align:center;">
         <h3>技术架构</h3>
         <table style="margin:0.5rem auto 0;width:auto;display:table;">
-          <thead><tr><th>层</th><th>技术栈</th></tr></thead>
           <tbody>
             <tr><td>前端</td><td>Vue 3 + TS + Vite + Pico.css</td></tr>
             <tr><td>后端</td><td>Rust Axum + sqlx + utoipa</td></tr>
@@ -58,13 +57,16 @@ async function reset() {
         </table>
       </div>
       <div style="text-align:center;">
-        <h3>设计原则</h3>
-        <ul style="margin:0.5rem auto 0;display:inline-block;text-align:left;">
-          <li>自顶向下设计，自底向上实现</li>
-          <li>模块化解耦，骨架最小集优先</li>
-          <li>前后端分离，热重载调试</li>
-          <li>单一二进制交付，精简运行时</li>
-        </ul>
+        <h3>设计思想</h3>
+        <table style="margin:0.5rem auto 0;width:auto;display:table;">
+          <tbody>
+            <tr><td>1</td><td>自顶向下设计，模块化解耦</td></tr>
+            <tr><td>2</td><td>自底向上实现，骨架最小集优先</td></tr>
+            <tr><td>3</td><td>前后端分离，热重载调试</td></tr>
+            <tr><td>4</td><td>单一二进制交付，精简运行时</td></tr>
+            <tr><td>5</td><td>swagger-api 在线文档，一目了然</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>

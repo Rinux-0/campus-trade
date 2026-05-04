@@ -1,7 +1,8 @@
 # 校园二手交易平台数据库系统
 
-在线访问网址：`http://<your-ip>:3000`
-
+在线访问网址：`https://iwfyxqkzfxgl.cloud.sealos.io`
+> 若自行本地部署：`http://localhost:3000`
+> Swagger UI：`http://localhost:3000/api`
 ## 技术栈
 
 - 后端：Rust Axum + sqlx + PostgreSQL
@@ -10,7 +11,7 @@
 - 文档：Swagger UI（utoipa）
 - 部署：Docker + Sealos 云平台
 
-## 快速启动
+## 本地快速部署
 
 ### 通用前提
 
@@ -104,7 +105,7 @@ cd ../frontend; pnpm install; pnpm dev
 项目通过 GitHub Actions 自动构建 Docker 镜像并推送至 Docker Hub，Sealos 云平台拉取镜像运行。
 
 ```
-git push → GitHub Actions (CI/CD) → Docker Hub → Sealos 云平台
+jj git push → GitHub Actions (CI/CD) → Docker Hub → Sealos 云平台
 ```
 
 - **Docker 镜像**：`rinux0/campus-trade:latest`
@@ -161,6 +162,6 @@ item (item_id PK, item_name, category, price, status, seller_id FK→user)
 orders (order_id PK, item_id UNIQUE FK→item, buyer_id FK→user, order_date)
 ```
 
-视图：
-- `sold_items_view`：已售商品（含商品名 + 买家信息）
-- `unsold_items_view`：未售商品
+商品视图：
+- 已售：即“订单列表”，可前往“订单页”查看
+- 未售：可前往“商品页”，选择“未售状态”查看
