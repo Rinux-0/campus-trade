@@ -1,8 +1,9 @@
 # 校园二手交易平台数据库系统
 
-在线访问网址：`https://iwfyxqkzfxgl.cloud.sealos.io`
-> 若自行本地部署：`http://localhost:3000`
-> Swagger UI：`http://localhost:3000/api`
+*在线访问网址*： `https://teoytuoghapg.sealoshzh.site`
+> 若自行本地部署： `http://localhost:3000`
+> Swagger UI： `http://localhost:3000/api`
+
 ## 技术栈
 
 - 后端：Rust Axum + sqlx + PostgreSQL

@@ -65,8 +65,8 @@ async function doSearch() {
   if (fSeller.value.length) p.seller_id = fSeller.value.join(',')
   if (fBuyer.value.length) p.buyer_id = fBuyer.value.join(',')
   if (fItemId.value.trim()) p.item_id = fItemId.value.trim()
-  if (fMinPrice.value !== null) p.min_price = fMinPrice.value
-  if (fMaxPrice.value !== null) p.max_price = fMaxPrice.value
+  if (fMinPrice.value !== null && !isNaN(fMinPrice.value)) p.min_price = fMinPrice.value
+  if (fMaxPrice.value !== null && !isNaN(fMaxPrice.value)) p.max_price = fMaxPrice.value
   if (fDateFrom.value.trim()) p.date_from = fDateFrom.value.trim()
   if (fDateTo.value.trim()) p.date_to = fDateTo.value.trim()
   try {

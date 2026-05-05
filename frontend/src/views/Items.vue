@@ -107,7 +107,7 @@ onMounted(() => { load(); aggAll() })
         <td>{{ item.status === 1 ? '已售' : '未售' }}</td>
         <td>{{ item.seller_id }}</td>
         <td style="white-space:nowrap;">
-          <button class="outline" @click="editItemId = item.item_id; editPrice = item.price">改价</button>
+          <button class="outline" v-if="item.status === 0" @click="editItemId = item.item_id; editPrice = item.price">改价</button>
           <button class="outline" v-if="item.status === 0" style="margin-left:0.25rem;" @click="buy(item.item_id)">购买</button>
           <button class="secondary" v-if="item.status === 0" style="margin-left:0.25rem;" @click="remove(item.item_id)">删除</button>
         </td>
